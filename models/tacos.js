@@ -4,4 +4,4 @@ const orm = require("./config/orm");
 
 
 
-module.exports = 
+module.exports 

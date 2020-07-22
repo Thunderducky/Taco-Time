@@ -1,23 +1,26 @@
 const connection = require("./connection")
 
+const ORM = {
 
-
-function selectAll() {
-    connection.query("SELECT * FROM tacos", function (err, res) {
-        if (err) throw err;
+    selectAll: function () {
+        connection.query("SELECT * FROM tacos", function (err, res) {
+            if (err) throw err;
+        })
     },
 
-        function insertOne() {
-            connection.query("INSERT INTO tacos SET ?", function (err, res) {
-                if (err) throw err;
-            }
-            ),
-},
+    insertOne: function () {
+        connection.query("INSERT INTO tacos SET ?", function (err, res) {
+            if (err) throw err;
+        })
+    },
 
-        function updateOne() {
+    updateOne: function () {
+        connection.query("INSERT INTO tacos SET ?", function (err, res) {
+            if (err) throw err;
+        })
+    }
 
-        },
+};
 
 
-
-        module.exports = ORM
+module.exports = ORM
