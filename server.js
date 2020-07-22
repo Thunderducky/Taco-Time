@@ -1,15 +1,16 @@
+const express = require("express");
 const mysql = require("mysql");
+const escapeHtml = require("escape-html");
 const connection = require("./config/connection")
 const express = require("express");
 const view = require("./views");
-
-
 const app = express();
+
 const PORT = process.env.PORT || 8080;
 
-// Data
-const icecreams = [
-];
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //routes
 app.get("/", function (req, res) {
@@ -19,6 +20,12 @@ app.get("/", function (req, res) {
       <a href="/tacos">Take me to the Taco Heaven!</a>
     `
     ));
+})
+
+app.post("/", function (req, res) {
+    const taco = req.body.taco
+
+    connection.query("INSERT INTO tacos (taco) VALUES (?)",)
 })
 
 app.listen(PORT, function () {
