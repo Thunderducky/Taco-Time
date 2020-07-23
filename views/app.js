@@ -12,9 +12,8 @@ module.exports = function (body) {
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     
-    
-    
         <title>Taco Time</title>
+
         <style>
             body {
                 font-family: 'Special Elite', cursive;
@@ -52,6 +51,7 @@ module.exports = function (body) {
                 font-size: 44px;
             }
         </style>
+        
     </head>
     
     <body>
@@ -104,7 +104,7 @@ module.exports = function (body) {
                 <div class="form-group">
     
                     <label for="tacotext">What's your favorite taco?</label>
-                    <textarea class="form-control" id="tacotext" rows="1"></textarea>
+                    <textarea class="form-control" id="tacotext" name="tacos" rows="1"></textarea>
     
                 </div>
     
@@ -113,8 +113,6 @@ module.exports = function (body) {
             </form>
     
         </div>
-    
-    
     
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -130,5 +128,5 @@ module.exports = function (body) {
     </body>
     
     </html>
-    `;
-}
+    `
+};

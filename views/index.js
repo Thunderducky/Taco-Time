@@ -1,4 +1,4 @@
 module.exports = {
-    app: require("/app"),
-    tacos: require("/tacos")
+    app: require("./app"),
+    tacos: require("./tacos")
 }
